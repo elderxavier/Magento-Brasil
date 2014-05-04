@@ -47,7 +47,6 @@ Pacote de Tradução Incluso
 Módulos Inclusos
 ==============
 
-
 :: www.magentocommerce.com/magento-connect/aoe-scheduler.html</br>
 :: www.magentocommerce.com/magento-connect/one-page-checkout.html</br>
 :: www.magentocommerce.com/magento-connect/aschroder-com-smtp-pro-email-free-and-easy-magento-emailing-for-smtp-gmail-or-google-apps-email.html
