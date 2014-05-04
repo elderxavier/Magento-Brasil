@@ -13,9 +13,9 @@ Versão Demonstrativa - Loja Virtual
 Versão Demonstrativa - Sistema Administrativo
 ==============
 
-:: http://www.cerebrum.com.br/demos/magento_1.8.1.0_template_default_php_54/admin
-:: usuario - demo
-:: senha - 123456a
+:: http://www.cerebrum.com.br/demos/magento_1.8.1.0_template_default_php_54/admin<br/>
+:: usuario - demo<br/>
+:: senha - 123456a<br/>
 :: ATENÇÃO - para o usuario demo não está habilitado todos os menus.
 
 
