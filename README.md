@@ -28,7 +28,7 @@ Recomendação de Hospedagem
 Zend Guard Loader
 ==============
 
-:: solicite para a Nexcess a instalação do componente gratuito Zend Guard Loader.<br/>
+:: Solicite para a Nexcess a instalação do componente gratuito Zend Guard Loader.<br/>
 :: www.zend.com/en/products/guard
 
 
