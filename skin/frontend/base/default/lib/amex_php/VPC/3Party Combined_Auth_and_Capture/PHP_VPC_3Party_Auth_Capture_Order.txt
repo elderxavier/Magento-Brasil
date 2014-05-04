@@ -1,0 +1,65 @@
+README.TXT
+==========
+
+Please note that the Advance Merchant Administration User credentials will need to be filled in at line 218 to line 225 from
+PHP_VPC_3Party_Auth_Capture_Order_DR.php for the capture to function.
+
+
+							
+							
+
+----------------- Disclaimer ---------------------------------------------------
+
+COPYRIGHT © 2009: TNS Payment Technologies Pty Ltd a company incorporated with 
+Australian Company Number 052 950 375 (TNS).  All rights reserved. 
+
+THIS DOCUMENT IS INTENDED TO BE LEGALLY BINDING UPON YOU. IF YOU DO NOT ACCEPT 
+THESE EXAMPLE CODE TERMS AND CONDITIONS YOU ARE NOT ENTITLED TO USE THIS DOCUMENT,
+AND MUST RETURN IT TO TNS.
+
+CONFIDENTIAL: this document is provided by TNS on the basis that you will treat 
+it as confidential and deal with it subject to these Example Code terms and 
+conditions. 
+ 
+No part of this document may be reproduced or copied in any form by any means 
+without the written permission of TNS.  Unless otherwise expressly agreed in 
+writing, the information contained in this document is subject to change without 
+notice and TNS assumes no responsibility for any alteration to, or any error or 
+other deficiency, in this document. 
+ 
+All intellectual property rights embodied in this document and in all extracts 
+and things derived from any part of it are owned by TNS and will be assigned by 
+you to TNS on their creation. You will protect all the intellectual property rights 
+relating to this document in a manner that is equal to the protection you provide 
+your own intellectual property.  You will notify TNS immediately, and in writing 
+where you become aware of a breach of TNS's intellectual property rights in relation 
+to this Document.
+ 
+The names "TNS" and "Transaction Network Services" are trademarks of TNS Payment 
+Technologies Pty Ltd or its related companies and you must not use that name or 
+any similar name.
+ 
+TNS may at its sole discretion terminate the rights granted in this document with 
+immediate effect by notifying you in writing and you will thereupon return (or 
+destroy and certify that destruction to TNS) all copies and extracts of this Document 
+in your possession or control.
+ 
+TNS does not warrant the accuracy or completeness of this Document or its content 
+or its usefulness to you or your merchant customers. Mention in this document of any 
+product not owned by TNS does not constitute an endorsement of that product.
+
+TO THE EXTENT PERMITTED BY LAW, ALL CONDITIONS AND WARRANTIES IMPLIED BY LAW 
+(WHETHER AS TO FITNESS FOR ANY PARTICULAR PURPOSE OR OTHERWISE) ARE EXCLUDED.  WHERE 
+THE EXCLUSION IS NOT EFFECTIVE, TNS LIMITS ITS LIABILITY TO THE COST OF RESUPPLYING 
+THIS DOCUMENT OR THE RESUPPLY OF THIS DOCUMENT (AT TNS'S OPTION). TO THE MAXIMUM 
+EXTENT PERMITTED BY LAW, TNS LIMITS ITS LIABILITY IN RESPECT OF THIS DOCUMENT, 
+INCLUDING BUT NOT LIMITED TO ANY ACTION TAKEN OR OMITTED BY YOU IN RESPECT OF THIS 
+DOCUMENT, TO ONE HUNDRED AUSTRALIAN DOLLARS (AUD$100).
+ 
+Data used in examples and sample data files in this document are intended to be
+fictional and any resemblance to real persons or companies is entirely coincidental.
+TNS does not indemnify you or any third party in relation to the content or any use 
+of the content contemplated in or in accordance with this document. 
+ 
+INTERPRETATION OF, AND ALL DISPUTES ARISING OUT OF, THIS DOCUMENT ARE GOVERNED 
+BY THE LAWS OF NEW SOUTH WALES, AUSTRALIA.

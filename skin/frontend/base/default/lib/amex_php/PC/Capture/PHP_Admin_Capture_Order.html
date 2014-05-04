@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- 
+ * Version 1.0
+ *
+ * ----------------- Disclaimer ------------------------------------------------
+ *
+ * Copyright © 2007 Dialect Payment Technologies - a Transaction Network
+ * Services company.  All rights reserved.
+ *
+ * This program is provided by Dialect Payment Technologies on the basis that
+ * you will treat it as confidential.
+ *
+ * No part of this program may be reproduced or copied in any form by any means
+ * without the written permission of Dialect Payment Technologies.  Unless
+ * otherwise expressly agreed in writing, the information contained in this
+ * program is subject to change without notice and Dialect Payment Technologies
+ * assumes no responsibility for any alteration to, or any error or other
+ * deficiency, in this program.
+ *
+ * 1. All intellectual property rights in the program and in all extracts and 
+ *    things derived from any part of the program are owned by Dialect and will 
+ *    be assigned to Dialect on their creation. You will protect all the 
+ *    intellectual property rights relating to the program in a manner that is 
+ *    equal to the protection you provide your own intellectual property.  You 
+ *    will notify Dialect immediately, and in writing where you become aware of 
+ *    a breach of Dialect's intellectual property rights in relation to the
+ *    program.
+ * 2. The names "Dialect", "QSI Payments" and all similar words are trademarks
+ *    of Dialect Payment Technologies and you must not use that name or any 
+ *    similar name.
+ * 3. Dialect may at its sole discretion terminate the rights granted in this 
+ *    program with immediate effect by notifying you in writing and you will 
+ *    thereupon return (or destroy and certify that destruction to Dialect) all 
+ *    copies and extracts of the program in its possession or control.
+ * 4. Dialect does not warrant the accuracy or completeness of the program or  
+ *    its content or its usefulness to you or your merchant customers.  To the  
+ *    extent permitted by law, all conditions and warranties implied by law  
+ *    (whether as to fitness for any particular purpose or otherwise) are  
+ *    excluded. Where the exclusion is not effective, Dialect limits its  
+ *    liability to $100 or the resupply of the program (at Dialect's option).
+ * 5. Data used in examples and sample data files are intended to be fictional 
+ *    and any resemblance to real persons or companies is entirely coincidental.
+ * 6. Dialect does not indemnify you or any third party in relation to the
+ *   content or any use of the content as contemplated in these terms and 
+ *    conditions. 
+ * 7. Mention of any product not owned by Dialect does not constitute an 
+ *    endorsement of that product.
+ * 8. This program is governed by the laws of New South Wales, Australia and is 
+ *    intended to be legally binding. 
+ * ---------------------------------------------------------------------------*/
+
+/**
+ * Please refer to the following guides for more information:
+ *     1. Payment Client Integration Guide
+ *        this details how to integrate with Payment Client 3.1.
+ *     2. Payment Client Reference Guide
+ *        this guide details all the input and return parameters that are used
+ *        by the Payment Client and Payment Server for a Payment Client
+ *        integration.
+ *     3. Payment Client Install Guide
+ *        this guide details the installation of Payment Client 3.1 and related
+ *        issues.
+ *
+ * @author Dialect Payment Technologies
+ *
+ */
+ -->
+ <html>
+
+<head><title>PHP AMA Transaction</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+    <style type='text/css'>
+        <!--
+        h1       { font-family:Arial,sans-serif; font-size:20pt; font-weight:600; margin-bottom:0.1em; color:#08185A;}
+        h2       { font-family:Arial,sans-serif; font-size:14pt; font-weight:100; margin-top:0.1em; color:#08185A;}
+        h2.co    { font-family:Arial,sans-serif; font-size:24pt; font-weight:100; margin-top:0.1em; margin-bottom:0.1em; color:#08185A}
+        h3       { font-family:Arial,sans-serif; font-size:16pt; font-weight:100; margin-top:0.1em; margin-bottom:0.1em; color:#08185A}
+        h3.co    { font-family:Arial,sans-serif; font-size:16pt; font-weight:100; margin-top:0.1em; margin-bottom:0.1em; color:#FFFFFF}
+        body     { font-family:Verdana,Arial,sans-serif; font-size:10pt; background-color:#FFFFFF; color:#08185A}
+        th       { font-family:Verdana,Arial,sans-serif; font-size:8pt; font-weight:bold; background-color:#CED7EF; padding-top:0.5em; padding-bottom:0.5em;  color:#08185A}
+        tr       { height:25px; }
+        tr.shade { height:25px; background-color:#CED7EF }
+        tr.title { height:25px; background-color:#0074C4 }
+        td       { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#08185A }
+        td.red   { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#FF0066 }
+        td.green { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#008800 }
+        p        { font-family:Verdana,Arial,sans-serif; font-size:10pt; color:#FFFFFF }
+        p.blue   { font-family:Verdana,Arial,sans-serif; font-size:7pt;  color:#08185A }
+        p.red    { font-family:Verdana,Arial,sans-serif; font-size:7pt;  color:#FF0066 }
+        p.green  { font-family:Verdana,Arial,sans-serif; font-size:7pt;  color:#008800 }
+        div.bl   { font-family:Verdana,Arial,sans-serif; font-size:7pt;  color:#0074C4 }
+        div.red  { font-family:Verdana,Arial,sans-serif; font-size:7pt;  color:#FF0066 }
+        li       { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#FF0066 }
+        input    { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#08185A; background-color:#CED7EF; font-weight:bold }
+        select   { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#08185A; background-color:#CED7EF; font-weight:bold; }
+        textarea { font-family:Verdana,Arial,sans-serif; font-size:8pt;  color:#08185A; background-color:#CED7EF; font-weight:normal; scrollbar-arrow-color:#08185A; scrollbar-base-color:#CED7EF }
+        -->
+    </style>
+</head>
+<body>
+
+<!-- start branding table -->
+<table width='100%' border='2' cellpadding='2' bgcolor='#0074C4'>
+    <tr>
+        <td bgcolor='#CED7EF' width='90%'><h2 class='co'>&nbsp;Amex Payment Client 3.1 Example</h2></td>
+        <td bgcolor='#0074C4' align='center'><h3 class='co'>Dialect<br>Payments</h3></td>
+    </tr>
+</table>
+<!-- end branding table -->
+
+<!-- The "Pay Now!" button submits the form and gives control to the form 'action' parameter -->
+<form action="PHP_Admin_Capture.php" method="post">
+<input type="hidden" name="Title" value="PHP AMA Capture Transaction">
+
+<center><h1>PHP AMA Capture Transaction</h1><br/></center>
+
+<!-- get user input -->
+<table align="center" border="0" width="80%">
+
+    <tr class="title">
+        <td colspan="2"><p><strong>&nbsp;Optional Sockets Configuration</strong></p></td>
+    </tr>
+    <tr>    
+        <td align="right"><strong><em>Host IP Address: </em></strong></td>
+        <td><p class="blue"><input name="HostName" value="127.0.0.1"> Check to output socket commands. <input type='checkbox' name="DebugOn" value='1'></p></td>
+    </tr>
+    <tr class="shade">
+        <td align="right"><strong><em>Host Port Number: </em></strong></td>
+        <td><input name="Port" maxlength="10" value="9050"></td>
+    </tr>
+
+    <tr><td colspan="2">&nbsp;<hr width="75%">&nbsp;</td></tr>
+
+    <tr class="title">
+        <td colspan="2"><p><strong>&nbsp;Required Capture Transaction Fields</strong></p></td>
+    </tr>
+    <tr>    
+        <td align="right"><strong><em>MerchTxnRef: </em></strong></td>
+        <td><input name = "MerchTxnRef" maxlength="40" value=""></td>
+    </tr>
+    <tr class="shade">    
+        <td align="right"><strong><em>Merchant ID: </em></strong></td>
+        <td><input name = "MerchantID" maxlength="16" value=""></td>
+    </tr>
+    <tr>
+        <td align="right"><strong><em>Shopping Transaction Number: </em></strong></td>
+        <td><input name="TransactionNo" maxlength="19" value=""></td>
+    </tr>
+    <tr class="shade">
+        <td align="right"><em><strong>Capture Amount: </strong><br>
+            <font size='1'>(Cents, pence, yen, etc.)</font> </em></td>
+        <td><input name = "CaptureAmount"  maxlength="10" value="100"></td>
+    </tr>
+    <tr>
+        <td align="right"><strong><em>AMA User Name: </em></strong></td>
+        <td><input name="Username" maxlength="20" value=""></td>
+    </tr>
+    <tr class="shade">
+        <td align="right"><em><strong>AMA Password: </strong></td>
+        <td><input type="Password" name="Password"  maxlength="25" value=""></td>
+    </tr>
+    
+    <tr><td colspan="2">&nbsp;</td></tr>
+
+    <tr>    
+        <td>&nbsp;</td> 
+        <td><input type="submit" name="SubButL" value="Capture Now!"></td>
+    </tr>
+
+										<tr><td colspan="2">&nbsp;<hr width="75%">&nbsp;</td></tr>
+                    <tr class="title">
+                        <td colspan="2"><p><b>&nbsp;Example Code Version Information</b></p></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right"><strong><em>Example Version:</em></strong></td>
+                        <td style="text-align: left"><strong>1.0</strong></td>
+                    </tr>
+                    <tr class="shade">
+                        <td style="text-align: right"><strong><em>PaymentClientConnection.php Version:</em></strong></td>                    
+                        <td style="text-align: left"><strong>1.0</strong></td>                    
+                    </tr>
+                    <tr>
+                        <td style="text-align: right"><strong><em>PaymentCodesHelper.php Version:</em></strong></td>
+                        <td style="text-align: left"><strong>1.0</strong></td>                        
+                    </tr>
+                    <tr>
+                        <td style="height: 21px; width:50%" />
+                        <td style="height: 21px; width:50%" />
+                    </tr>
+
+    <tr><td colspan="2">&nbsp;<hr width="75%">&nbsp;</td></tr>
+    <tr>
+        <td colspan="2">
+        <p class='blue'><strong><em><u>Note</u>:</em></strong><br/> 
+        Any information passed through the customer's browser 
+        can potentially be modified by the customer, or even by third parties to 
+        fraudulently alter the transaction data. Therefore all transactional 
+        information should <strong>not</strong> be passed through the browser in
+        a way that could potentially be modified (e.g. hidden form fields). 
+        Transaction data should only be accepted once from a browser at the 
+        point of input, and then kept in a way that does not allow others 
+        to modify it (e.g. database, server session, etc.). Any transaction 
+        information displayed to a customer, such as amount, should be passed 
+        only as display information and the actual transactional data should be 
+        retrieved from the secure source last thing at the point of processing 
+        the transaction.</p>
+
+        <p class='blue'>Fields like return links back to the order page (AgainLink), 
+        titles, (sockets' data when applicable), and any other non-transactional 
+        information are only included here in the example for information purposes. 
+        They do not apply to the transaction and should not be included in production 
+        code orders.</p>
+        </td>
+    </tr>
+
+    <tr>    
+        <td width="40%">&nbsp;</td>
+        <td width="60%">&nbsp;</td>
+    </tr>
+
+</table>
+
+</form>
+</body>
+</html>
