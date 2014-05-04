@@ -44,7 +44,28 @@ Pacote de Tradução Incluso
 :: www.mariosam.com.br/magento/traducao-magento
 
 
+Módulos Inclusos
+==============
+
+
+:: www.magentocommerce.com/magento-connect/aoe-scheduler.html</br>
+:: www.magentocommerce.com/magento-connect/one-page-checkout.html</br>
+:: www.magentocommerce.com/magento-connect/aschroder-com-smtp-pro-email-free-and-easy-magento-emailing-for-smtp-gmail-or-google-apps-email.html
+
+
+Suporte Para Assuntos Relacionados ao Magento
+==============
+
+:: http://www.comunidademagento.com.br/forum/
+
+
 Módulos de Pagamentos, Fretes, Anti-Fraude e Muito Mais ...
 ==============
 
 :: www.cerebrum.com.br
+
+
+Suporte Para Módulos da Cerebrum
+==============
+
+:: https://cerebrum.freshdesk.com/support/tickets/new
